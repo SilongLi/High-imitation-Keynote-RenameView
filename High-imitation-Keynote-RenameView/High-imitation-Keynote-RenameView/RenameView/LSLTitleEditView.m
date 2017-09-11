@@ -3,7 +3,7 @@
 //  High-imitation-Keynote-RenameView
 //
 //  Created by Bruce Li on 16/11/20.
-//  Copyright © 2016年 XMindKate. All rights reserved.
+//  Copyright © 2016年 LongshaoDream. All rights reserved.
 //
 
 #import "LSLTitleEditView.h"
@@ -37,7 +37,6 @@
           animationCompletion:(LSLTitleEditEndAnimationCompletion)animationCompletion {
     
     if (self = [super init]) {
-        
         NSParameterAssert(originImageView);
          
         self.backgroundColor = [UIColor clearColor];
@@ -91,8 +90,8 @@
 }
 
 - (void)layoutSubviewsWithSize:(CGSize)size {
-    BOOL isLandscape    = ([UIScreen mainScreen].bounds.size.width > [UIScreen mainScreen].bounds.size.height) ? YES : NO;
-    BOOL isWidthNarrow  = [UIApplication sharedApplication].keyWindow.rootViewController.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact;
+    BOOL isLandscape   = ([UIScreen mainScreen].bounds.size.width > [UIScreen mainScreen].bounds.size.height) ? YES : NO;
+    BOOL isWidthNarrow = [UIApplication sharedApplication].keyWindow.rootViewController.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact;
     
     /// If width greater than half screen width on iPad, subviews for left and right structure.
     CGFloat halfScreenWidth = [UIScreen mainScreen].bounds.size.width / 2;
